@@ -1,0 +1,50 @@
+<h1>Aarthi 💖<br>Will You Marry Me? 💍</h1>
+
+<button id="yes" onclick="yesClicked()">YES</button>
+<button id="no">NO</button>
+body{
+ text-align:center;
+ background:#ffe6f2;
+ margin-top:100px;
+ font-family:Arial;
+ overflow:hidden;
+}
+
+h1{
+ color:#ff1493;
+}
+
+button{
+ padding:15px 30px;
+ font-size:20px;
+ border:none;
+ border-radius:10px;
+ cursor:pointer;
+}
+
+#yes{
+ background:green;
+ color:white;
+}
+
+#no{
+ background:red;
+ color:white;
+ position:absolute;
+}
+const noBtn = document.getElementById("no");
+
+noBtn.addEventListener("mouseover", () => {
+ noBtn.style.top = Math.random()*80 + "%";
+ noBtn.style.left = Math.random()*80 + "%";
+});
+
+function yesClicked(){
+ document.body.innerHTML = `
+ <h1 style="margin-top:150px;color:#ff1493;">
+ 💖 Your Idiot Happy Princess 💖
+ <br><br>
+ I Knew You Would Say Yes! 😘💍
+ </h1>
+ `;
+}
